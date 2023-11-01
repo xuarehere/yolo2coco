@@ -1,0 +1,40 @@
+BASE:
+  # 图片地址
+  path: ["./VOC2007/JPEGImages",
+         ]
+  # # 被丢弃的信息，储存地址。如：图片中的所有的label都不在合并的类型中，因此丢弃       
+  save_dir: "./tmp/"             
+OLD:
+  old_labels: ['Ambulance', 
+            'BigTruck', 
+            'Bus', 
+            'Car', 
+            'CarGroup', 
+            'CoachesCar', 
+            'Cycle', 
+            'DangerousTruck', 
+            'FireTruck', 
+            'GarbageTruck', 
+            'Guardrail', 
+            'MuckTruck', 
+            'Pedestrian', 
+            'PoliceCar', 
+            'Tanker', 
+            'TourBus', 
+            'Trafficlight', 
+            'Trafficsigns', 
+            'Truck']  # 原来的类别
+
+NEW:
+  new_labels: ["Car", 
+              "Bus", 
+              "Cycle", 
+              "Pedestrian", 
+              "Truck", ]     # 新的类别，不在这里面就被抛弃
+  merge_labels: {
+            "Car": ["PoliceCar", "Ambulance","TestCar", "OfficialCar", "DangerousCar", "CoachesCar"],
+            "Bus": ["TourBus",  ],
+            "Cycle": [], 
+            "Pedestrian": [], 
+            "Truck": ["DangerousTruck", "FireTruck", "BigTruck", "Tanker", "GarbageTruck", "MuckTruck"],
+          }                 # 合并的类别     
