@@ -111,8 +111,8 @@ def move_file(source_file, destination_file, new_name=""):
             
 class DataOpts:
     def __init__(self, config="configs/merge_labels.yaml") -> None:
-        # label_path = "/workspace/dataset/special_site_jiaolian_add_futian_special_vehicle_count/VOC2007/labels"
-        # path = '/workspace/dataset/special_site_jiaolian_add_futian_special_vehicle_count/VOC2007/JPEGImages/'
+        # label_path = "/workspace/dataset/special_site_jiaolian_add_site1_special_vehicle_count/VOC2007/labels"
+        # path = '/workspace/dataset/special_site_jiaolian_add_site1_special_vehicle_count/VOC2007/JPEGImages/'
         # path = "./VOC2007/JPEGImages/"
         self.config = config
         self.init_param()
@@ -214,7 +214,7 @@ class DataOpts:
             在映射列表中，进行id 映射
             不在映射列表中，就进行 id 丢弃
         """
-        # tmp_label_file = '/workspace/dataset/special_site_jiaolian_add_futian_special_vehicle_count/tmp/2022_05_09_000204.txt'        
+        # tmp_label_file = '/workspace/dataset/special_site_jiaolian_add_site1_special_vehicle_count/tmp/2022_05_09_000204.txt'        
         # check_list = ["frame_000367.txt", 
         #             #   "004623.txt", "000763.txt", "000367.txt", "004450.txt", "004451.txt", "003662.jpg", "003663.jpg", "003664.jpg", "003665.jpg", 
         #               ]
@@ -320,9 +320,9 @@ class DataOpts:
 
 """
 self.label_files[0]
-'/workspace/dataset/special_site_jiaolian_add_futian_special/VOC2007/labels/2022_05_09_000001.txt'
+'/workspace/dataset/special_site_jiaolian_add_site1_special/VOC2007/labels/2022_05_09_000001.txt'
 self.img_files[0]
-'/workspace/dataset/special_site_jiaolian_add_futian_special/VOC2007/JPEGImages/2022_05_09_000001.jpg'
+'/workspace/dataset/special_site_jiaolian_add_site1_special/VOC2007/JPEGImages/2022_05_09_000001.jpg'
 """            
         
 def parse_opt(known=False):
